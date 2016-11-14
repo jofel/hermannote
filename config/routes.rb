@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
+  get 'pages/info'
 
   root 'home#index'
+
+  resources :programs
   resources :requests
+
   devise_for :users, controllers: { registrations: "registrations"}
 
 
