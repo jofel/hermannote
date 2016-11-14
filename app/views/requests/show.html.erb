@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Owner:</strong>
+  <strong>Kérvényező:</strong>
   <%= @request.owner %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Dátum:</strong>
   <%= @request.date %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Tartalom:</strong>
   <%= @request.content %>
 </p>
 
 <p>
-  <strong>Decision:</strong>
+  <strong>Döntés:</strong>
   <%= @request.decision %>
 </p>
 
-<%= link_to 'Edit', edit_request_path(@request) %> |
-<%= link_to 'Back', requests_path %>
+<%= link_to 'Átír', edit_request_path(@request) %> |
+<%= link_to 'Vissza', requests_path %>

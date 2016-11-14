@@ -20,9 +20,9 @@
         <td><%= request.date %></td>
         <td><%= request.content %></td>
         <td><%= request.decision %></td>
-        <td><%= link_to 'Show', request %></td>
-        <td><%= link_to 'Edit', edit_request_path(request) %></td>
-        <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="no-print"><%= link_to 'Olvas', request %></td>
+        <td class="no-print"><%= link_to 'Átír', edit_request_path(request) %></td>
+        <td class="no-print"><%= link_to 'Töröl', request, method: :delete, data: { confirm: 'Biztos törlöd?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Request', new_request_path %>
+<%= link_to 'Új Kérvény', new_request_path,  class: 'btn btn-default btn-info no-print' %>

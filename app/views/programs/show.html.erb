@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>Név:</strong>
   <%= @program.title %>
 </p>
 
 <p>
-  <strong>Owner:</strong>
+  <strong>Szervező:</strong>
   <%= @program.owner %>
 </p>
 
 <p>
-  <strong>Date:</strong>
+  <strong>Dátum:</strong>
   <%= @program.date %>
 </p>
 
 <p>
-  <strong>Content:</strong>
+  <strong>Tartalom:</strong>
   <%= @program.content %>
 </p>
 
 <p>
-  <strong>Decision:</strong>
+  <strong>Döntés:</strong>
   <%= @program.decision %>
 </p>
 
-<%= link_to 'Edit', edit_program_path(@program) %> |
-<%= link_to 'Back', programs_path %>
+<%= link_to 'Átír', edit_program_path(@program) %> |
+<%= link_to 'Vissza', programs_path %>
