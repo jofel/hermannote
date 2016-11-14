@@ -58,3 +58,5 @@ gem 'devise'
 
 #datepicker
 gem 'bootstrap-datepicker-rails'
+
+gem 'jquery-rails'
