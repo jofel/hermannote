@@ -4,15 +4,57 @@
     <title>Hermannote</title>
     <%= csrf_meta_tags %>
 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <% if user_signed_in? %>
-    <p> Hello, <%= current_user.name%> <br><%= current_user.email %> - <%= link_to "Sign out", destroy_user_session_path, :method => 'delete'%> </p>
-    <br>
-    <% end %>
-    <%= yield %>
+
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">HermanNote</a>
+        </div>
+        <% if user_signed_in? %>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>
+                <%= current_user.name %></a></li>
+              <!-- <li><a href="#"><span class="glyphicon glyphicon-log-in"></span></a></li> -->
+              <li><%= link_to "Kilépés", destroy_user_session_path, :method => 'delete'%></li>
+
+          </ul>
+          <% else %>
+            <!-- <ul class="nav navbar-nav navbar-right">
+                <li><%= link_to "Regisztráció", new_registration_path(resource_name) %></li>
+            </ul> -->
+
+        <% end %>
+      </div>
+    </nav>
+
+
+
+
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <!-- <div>
+      <% if user_signed_in? %>
+        <p> Hello, <%= current_user.name%> <br><%= current_user.email %> - <%= link_to "Sign out", destroy_user_session_path, :method => 'delete'%> </p>
+        <br>
+      <% end %>
+    </div> -->
   </body>
 </html>
